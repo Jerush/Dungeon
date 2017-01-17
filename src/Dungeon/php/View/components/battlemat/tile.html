@@ -1,0 +1,5 @@
+<script type="text/x-template" id="battlemat-tile">
+    <div class="battlemat-tile" @dragend="dragend" @dragenter="dragenter" @dragleave="dragleave" @dragover="dragover" @drop="drop">
+        <battlemat-item :key="element.$id" :element="element" v-for="element in elements"></battlemat-item>
+    </div>
+</script>

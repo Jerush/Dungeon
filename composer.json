@@ -1,0 +1,23 @@
+{
+  "config": {
+    "vendor-dir"                            : "php_modules"
+  },
+
+  "autoload": {
+    "psr-4": {
+      "Dungeon\\"                           : "src/Dungeon/php/",
+      "Extension\\"                         : "src/Dungeon/php/_Extensions"
+    }
+  },
+
+  "require": {
+    "mongodb/mongodb"                       : "~1.0",
+    "silex/silex"                           : "~2.0",
+    "symfony/symfony"                       : "~3.0",
+    "twig/twig"                             : "~1.0"
+  },
+
+  "require-dev": {
+    "phpunit/phpunit"                       : "~5.0"
+  }
+}

@@ -1,0 +1,27 @@
+@import "../../Bootstrap/scss/variables";
+@import "../../Bootstrap/scss/mixins";
+
+@import "components/card";
+@import "components/navbar";
+@import "components/panel";
+
+@import "battlemat";
+
+html,
+body {
+  height: 100%;
+}
+
+#application {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  > nav {
+
+  }
+
+  > div {
+    flex: 1;
+  }
+}

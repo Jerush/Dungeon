@@ -1,0 +1,24 @@
+@import "../colors";
+@import "../../../Bootstrap/scss/navbar";
+
+
+//////////////////////////////////////////////////////////////////////////////////////
+// BASE COMPONENT
+//////////////////////////////////////////////////////////////////////////////////////
+
+.navbar.bg-primary {
+  $schema: map-get($palette, 800);
+
+  $bg: map-get($schema, bg);
+  $fg: map-get($schema, fg);
+
+  @if (map-get($schema, fg) == $text_dk) {
+    @extend .navbar-light;
+  }
+
+  @if (map-get($schema, fg) == $text_lt) {
+    @extend .navbar-dark;
+  }
+
+  background-color: $bg !important;
+}

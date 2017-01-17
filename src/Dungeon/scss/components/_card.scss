@@ -1,0 +1,20 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  > .card-block {
+    flex: 1;
+    overflow: auto;
+  }
+}
+
+.card.loading {
+  &::after {
+    color: rebeccapurple;
+    content: 'loading…';
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}

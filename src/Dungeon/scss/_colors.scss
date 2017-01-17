@@ -1,0 +1,29 @@
+$text_dk: (
+  primary   : rgba(#000, 0.87),
+  secondary : rgba(#000, 0.54),
+  hint      : rgba(#000, 0.38),
+);
+
+$text_lt: (
+  primary   : rgba(#FFF, 1.00),
+  secondary : rgba(#FFF, 0.70),
+  hint      : rgba(#FFF, 0.50),
+);
+
+$palette: (
+  50   : (bg: #E8EAF6, fg: $text_dk),
+  100  : (bg: #C5CAE9, fg: $text_dk),
+  200  : (bg: #9FA8DA, fg: $text_dk),
+  300  : (bg: #7986CB, fg: $text_lt),
+  400  : (bg: #5C6BC0, fg: $text_lt),
+  500  : (bg: #3F51B5, fg: $text_lt),
+  600  : (bg: #3949AB, fg: $text_lt),
+  700  : (bg: #303F9F, fg: $text_lt),
+  800  : (bg: #283593, fg: $text_lt),
+  900  : (bg: #1A237E, fg: $text_lt),
+
+  A100 : (bg: #FFE57F, fg: $text_dk),
+  A200 : (bg: #FFD740, fg: $text_dk),
+  A400 : (bg: #FFC400, fg: $text_dk),
+  A700 : (bg: #FFAB00, fg: $text_dk),
+);

@@ -1,0 +1,38 @@
+.battlemat {
+  display: flex;
+  flex-direction: column;
+
+  > div {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+
+    > div {
+      flex: 1;
+
+      &::before {
+        content: '';
+        float: left;
+        padding-top: 100%;
+      }
+    }
+  }
+
+  > div:nth-child(odd) {
+    > div:nth-child(odd) {
+      background-color: #000;
+    }
+  }
+
+  > div:nth-child(even) {
+    > div:nth-child(even) {
+      background-color: #000;
+    }
+  }
+}
+
+.battlemat-tile {
+  &.drag {
+    background-color: red !important;
+  }
+}

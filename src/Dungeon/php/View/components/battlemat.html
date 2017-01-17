@@ -1,0 +1,8 @@
+<script type="text/x-template" id="battlemat">
+    <div class="battlemat">
+        {{ elements }}
+        <div v-for="x in 10">
+            <battlemat-tile :model="elements" :x="x" :y="y" v-for="y in 20"></battlemat-tile>
+        </div>
+    </div>
+</script>

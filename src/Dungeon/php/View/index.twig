@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>D</title>
+
+        <link href="/assets/img/favicon.png" rel="icon" sizes="48x48" type="image/png">
+
+        <link rel="stylesheet" type="text/css" href="[[ asset('/assets/css/lib/bootstrap.min.css', 'lib') ]]">
+        <link rel="stylesheet" type="text/css" href="[[ asset('/assets/css/dungeon.min.css', 'app') ]]">
+
+        <script src="[[ asset('/assets/js/lib/moment.min.js', 'lib') ]]"></script>
+        <script src="[[ asset('/assets/js/lib/jquery.min.js', 'lib') ]]"></script>
+    </head>
+
+    <body>
+        <div id="application">
+            <nav class="navbar navbar-full bg-primary">
+                <a class="navbar-brand" href="/">Cerile</a>
+
+                <ul class="nav navbar-nav">
+                    <router-link class="nav-item" tag="li" :to="{ name: 'battlemat' }">
+                        <a class="nav-link">Battlemat</a>
+                    </router-link>
+                    <router-link class="nav-item" tag="li" :to="{ name: 'characters' }">
+                        <a class="nav-link">Characters</a>
+                    </router-link>
+                </ul>
+            </nav>
+
+            <router-view name="root"></router-view>
+        </div>
+
+        {# Components #}
+        [[ source('@components/battlemat.html') ]]
+        [[ source('@components/battlemat/item.html') ]]
+        [[ source('@components/battlemat/tile.html') ]]
+        [[ source('@components/character/inventory.html') ]]
+
+        {# Routes #}
+        [[ source('@routes/battlemat.html') ]]
+        [[ source('@routes/characters.html') ]]
+        [[ source('@routes/characters/item.html') ]]
+
+        <script src="[[ asset('/assets/js/lib/vue.min.js', 'lib') ]]"></script>
+        <script src="[[ asset('/assets/js/lib/vue-router.min.js', 'lib') ]]"></script>
+
+        <script src="[[ asset('/assets/js/dungeon.min.js', 'app') ]]"></script>
+    </body>
+</html>

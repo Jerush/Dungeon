@@ -1,0 +1,18 @@
+<script type="text/x-template" id="route-characters">
+    <div class="card" :class="{ loading: loading }">
+        <div class="card-header">
+            Characters
+        </div>
+
+        <div class="card-block">
+            <ul is="transition-group">
+                <form class="character" v-for="character in characters" @submit.prevent="update(character)" :key="character.$id">
+                    <input v-model="character.name" placeholder="Edit Me">
+                    <input type="submit" value="SAVE">
+
+                    <router-link :to="{ name: 'characters.item', params: { character: character.$id }}">DETAIL</router-link>
+                </form>
+            </ul>
+        </div>
+    </div>
+</script>

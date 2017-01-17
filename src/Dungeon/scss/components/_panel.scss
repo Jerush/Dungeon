@@ -1,0 +1,25 @@
+.panel {
+  background-color: #eeeeee;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  > header {
+    background-color: #cccccc;
+    flex: 0 0 50px;
+  }
+
+  > div {
+    flex: 1;
+  }
+}
+
+.panel.loading {
+  &::after {
+    color: rebeccapurple;
+    content: 'loading…';
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
